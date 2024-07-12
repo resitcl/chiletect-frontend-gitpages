@@ -759,7 +759,7 @@ app.swiper = {
       },
       breakpoints: {
         0: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 20,
           slidesPerGroup: 1
         },
