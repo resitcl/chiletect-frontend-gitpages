@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=14426" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=14426" type="text/javascript"></script>
+    <link href="css/main.css?v=82109" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=82109" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -16,6 +18,10 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <header>
@@ -30,13 +36,14 @@
             </div>
             <div class="header__right">
               <div class="header__button"> <a href="#" class="btn">Hazte Socio</a></div>
-              <div class="header__button"> <a href="#" class="btn btn--dark">Contacto</a></div>
+              <div class="header__button"> <a href="contact.html" class="btn btn--dark">Contacto</a></div>
               <div class="header__button header__button--search--desktop"><a class="btn btn--social"><span class="fa fa-search"></span></a></div>
             </div>
           </div>
         </div>
       </div>
       <div class="header__secondary">
+        <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
             <input type="text" name="s" placeholder="Buscar producto">
@@ -61,11 +68,26 @@
                   <nav>
                     <ul>
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -83,12 +105,12 @@
                 <div class="header__nav__nav__header"> 
                   <div class="header__nav__isotipo"><img src="img/icons/logo-submenu-chiletec.png"></div>
                   <div class="header__nav__button"><a href="#" class="btn">Hazte Socio</a></div>
-                  <div class="header__nav__close">
+                  <div class="header__nav__back">
+                    <div></div>
                     <div></div>
                     <div></div>
                   </div>
-                  <div class="header__nav__back">
-                    <div></div>
+                  <div class="header__nav__close">
                     <div></div>
                     <div></div>
                   </div>
@@ -97,11 +119,27 @@
                   <div class="header__nav__nav__menu"> 
                     <ul> 
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -153,12 +191,229 @@
                     <li class="breadcrumb-item"><a href="#"><span>Mesas de Trabajo</span></a></li>
                   </ol>
                 </nav>
-                <h1 class="section__title">Accumsan laoreet iaculis praesent ornare
+                <h1 class="section__title">Quisque ac vestibulum mollis torquent
                 </h1>
-                <p class="section__description">A felis quis mattis lacinia curae commodo varius convallis ut. Faucibus lacus in dictumst non sed donec tempor fringilla tristique potenti mollis class malesuada aliquam.
+                <p class="section__description">Litora cursus vel nibh viverra vitae nisl taciti sodales aliquam. Nulla suspendisse metus nulla hendrerit arcu viverra justo ut faucibus per justo eleifend condimentum enim.
                 </p>
               </div>
-              <div class="section__image"> <img src="img/uploads/1.jpg"></div>
+              <div class="section__image"> <img src="img/uploads/2.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--worktables"> 
+        <div class="section__wrap section--sm">
+          <div class="section__header"> 
+            <h3 class="section__title">Mesas de trabajo </h3>
+            <p>Velit nibh dictum lacinia neque blandit torquent mattis non fermentum habitant purus turpis conubia fermentum.
+            </p>
+          </div>
+          <div class="section__body"> 
+            <div class="section__tabs"> 
+              <div class="tabs"> 
+                <div class="tabs__header"> 
+                  <div class="tab tab--current"> 
+                    <div class="tab__icon"><img src="img/icons/icon-worktable-1.png"></div>
+                    <p>Mesas gremiales</p>
+                  </div>
+                  <div class="tab"> 
+                    <div class="tab__icon"><img src="img/icons/icon-worktable-2.png"></div>
+                    <p>Mesas de socios</p>
+                  </div>
+                  <div class="tab"> 
+                    <div class="tab__icon"><img src="img/icons/icon-worktable-3.png"></div>
+                    <p>Mesas de negocios</p>
+                  </div>
+                </div>
+                <div class="tabs__body"> 
+                  <div class="tab tab--current"> 
+                    <div class="section__worktable">
+                      <div class="faq faq--worktable">
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 01</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp"><img src="img/uploads/1.jpg">
+                              <p>Imperdiet lobortis potenti donec varius suscipit facilisis rhoncus volutpat donec. Lacinia at urna cras cursus imperdiet suscipit ac ultricies felis. Phasellus aenean venenatis vulputate luctus metus feugiat ad adipiscing tempor. Tortor habitant quis quis est augue platea hendrerit phasellus vehicula sapien eu facilisis purus velit.
+                              </p>
+                              <p>Tortor nostra lacinia egestas maecenas cursus torquent aliquam senectus sem. Duis nec etiam convallis auctor blandit fames porta enim mi. Colus mi luctus cursus dictumst vel in odio diam et netus dictum phasellus ornare adipiscing.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 02</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Elit massa viverra vestibulum risus justo vel integer diam est. Ullamcorper vitae colus per dictum quam cursus massa neque egestas. Ac ornare tincidunt nulla dui adipiscing justo auctor ultricies fringilla. Odio eu taciti feugiat nibh iaculis felis id justo tristique taciti tempus curae lobortis nisl.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 03</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Hac tristique nisi suscipit sapien quisque phasellus rutrum dui vitae. Etiam congue a fringilla vulputate nam auctor at nisi sociosqu. Etiam nunc aliquam nulla tellus diam purus bibendum eros ac. Nulla taciti dui accumsan integer vitae ut dictumst pellentesque senectus condimentum ut faucibus varius eget.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 04</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Ligula commodo dictum tempus nam suscipit litora lectus sociosqu viverra. Eleifend scelerisque donec class malesuada laoreet nisi diam sollicitudin volutpat. Rhoncus augue ante netus nam imperdiet enim nulla convallis dictumst. Scelerisque suscipit dui eget nec lobortis tempor eros primis aenean neque luctus conubia himenaeos ac.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 05</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Hendrerit aptent ullamcorper a colus sem proin vivamus mi donec. Leo habitant vestibulum sed himenaeos dictum interdum ac donec imperdiet. Metus consequat egestas risus eros elit iaculis congue hendrerit laoreet. Malesuada proin vestibulum lacinia pulvinar volutpat maecenas luctus vulputate vivamus ornare sollicitudin nibh interdum fermentum.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 06</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Vitae nullam id varius proin curae curabitur neque torquent convallis. Vitae sagittis colus sollicitudin lacinia colus consequat ornare sodales eget. Imperdiet volutpat vivamus maecenas donec commodo sem praesent condimentum ullamcorper. Velit primis vitae platea elementum nunc porta ligula ante non vel nunc diam vestibulum aliquam.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="section__worktable">
+                      <div class="faq faq--worktable">
+                        <div class="faq__item faq__open">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 01</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp"><img src="img/uploads/1.jpg">
+                              <p>Integer praesent elementum vehicula leo blandit libero habitant laoreet diam. Maecenas consequat felis ut quisque aliquam egestas sociosqu vehicula cras. Etiam tristique senectus viverra ultricies fringilla platea placerat molestie sociosqu. Dapibus curae pulvinar aliquet luctus dictumst fringilla at nullam aliquam egestas feugiat aenean porta pulvinar.
+                              </p>
+                              <p>Venenatis ultrices venenatis luctus himenaeos habitant massa class netus etiam. Ultrices vehicula aliquam sem turpis nulla convallis sodales curabitur iaculis. Non massa nulla quisque sem malesuada lectus faucibus lacinia inceptos augue ut tellus viverra morbi.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 02</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Donec eget sagittis conubia magna rhoncus vivamus aliquam integer elementum. Nibh imperdiet ad eget facilisis tellus eget eu dictumst consequat. Praesent morbi proin mattis tortor netus vehicula mattis eget sociosqu. Libero donec suspendisse placerat in in iaculis enim congue interdum ultricies litora accumsan etiam ligula.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 03</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Turpis laoreet rhoncus hac orci magna eleifend magna nullam senectus. Condimentum diam curae donec eu diam elit aliquam dapibus mattis. Egestas mauris varius quisque fusce interdum dui lectus viverra aliquam. Sollicitudin lectus vestibulum porttitor quisque etiam lacinia elit euismod vulputate massa molestie lacus felis litora.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 04</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Curae habitasse porta colus vehicula mauris massa per sollicitudin congue. Vestibulum cursus lectus nibh malesuada fermentum proin quisque fusce et. Cras facilisis a accumsan lacinia molestie aenean nisl nostra malesuada. Nulla mattis etiam malesuada senectus sagittis varius duis condimentum bibendum eros etiam urna pharetra a.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 05</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Laoreet tempus maecenas tempor vivamus egestas himenaeos vitae posuere inceptos. Nec lacinia cras mi conubia cursus dictum morbi fames habitasse. Eros id porta lacinia ac consequat eu iaculis orci eu. Primis vel erat nisi sodales accumsan accumsan elit gravida justo tortor tempor aliquet donec urna.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 06</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Euismod id duis rhoncus metus primis id potenti cursus dapibus. Lacus eros bibendum class aliquam primis nulla a dictum aenean. Rutrum curae augue commodo sollicitudin nisl tortor convallis elementum libero. Euismod ultricies etiam luctus ullamcorper enim platea sem mauris lectus sodales conubia nec proin sociosqu.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="section__worktable">
+                      <div class="faq faq--worktable">
+                        <div class="faq__item faq__open">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 01</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp"><img src="img/uploads/1.jpg">
+                              <p>Rhoncus turpis magna ad libero orci nunc viverra orci praesent. Faucibus lacinia volutpat volutpat arcu non nunc id vulputate nostra. Colus mi nec felis augue vel platea maecenas tempor cursus. Conubia vivamus luctus scelerisque at ligula neque fusce cursus mauris aenean porttitor mollis eget pretium.
+                              </p>
+                              <p>Aenean inceptos ornare vel aliquet venenatis viverra mi curabitur aliquam. Tempus erat senectus tortor cubilia ligula turpis inceptos hendrerit aenean. Aenean curae feugiat dapibus urna lacinia nec vel donec habitant lectus colus nullam tempor lectus.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 02</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Himenaeos donec nullam sociosqu colus fusce justo sapien et eros. Lacus sodales sociosqu nisi fames convallis nibh quisque eu malesuada. Laoreet elementum hac aliquam congue sodales felis tortor leo integer. Egestas taciti est facilisis tortor habitant taciti consequat fusce rutrum dui euismod maecenas lectus magna.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 03</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Pellentesque dictumst nisl a nullam adipiscing curabitur duis posuere pharetra. Turpis ad vulputate torquent varius turpis id hendrerit consectetur et. Nec ullamcorper erat mollis placerat quisque ante aliquet litora orci. Habitasse torquent velit nulla interdum fames scelerisque pharetra bibendum lectus sociosqu etiam imperdiet nullam pharetra.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 04</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Imperdiet donec purus auctor cras commodo ac suscipit interdum interdum. Convallis eu lectus accumsan feugiat etiam tristique et nec elit. Ultrices cubilia leo metus sodales sapien platea per libero sapien. Quam venenatis cras habitant sociosqu suspendisse lacinia urna vel ac dui aptent euismod consequat urna.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 05</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Lobortis viverra porta fermentum turpis ut aliquet ac libero aliquet. Mollis augue fermentum magna vestibulum nisi conubia aenean ad nibh. Posuere nec metus at massa torquent leo elit euismod curabitur. Orci sapien curabitur ultricies dictumst curabitur semper libero risus curae erat hendrerit class neque leo.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <h3 class="faq__question"><span class="fa fa-angle-down"></span>Mesa de trabajo 06</h3>
+                          <div class="faq__answer">
+                            <div class="section__content wp">
+                              <p>Phasellus est sollicitudin pellentesque aenean torquent turpis vehicula praesent iaculis. Conubia potenti justo aenean leo donec dictum potenti tempus velit. Eleifend vulputate habitasse ullamcorper porttitor platea suscipit senectus elementum semper. Blandit justo aptent habitasse nunc lacinia sociosqu risus accumsan morbi nisl semper nisi metus hendrerit.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -236,86 +491,127 @@
           <div class="section__body"> 
             <div class="section__teams"> 
               <div class="cols">
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team">
                     <div class="article__avatar"> <img src="img/avatars/1.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Nunc cras
+                      <p class="article__position">Consectetur gravida
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/2.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Interdum tempus
+                      <p class="article__position">Eros nisl
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/3.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Pretium fringilla
+                      <p class="article__position">Ullamcorper eleifend
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/4.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Quis rhoncus
+                      <p class="article__position">Ligula vulputate
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/4.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Nostra ac
+                      <p class="article__position">Proin feugiat
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/3.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Potenti nisl
+                      <p class="article__position">Pellentesque morbi
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/2.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Quis augue
+                      <p class="article__position">Orci convallis
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/1.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Rutrum in
+                      <p class="article__position">Mattis felis
                       </p>
                     </div>
                   </article>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--tables section--light">
+        <div class="section__wrap">
+          <div class="section__header">
+            <h3 class="section__title">Últimas mesas de trabajo</h3>
+          </div>
+          <div class="section__body">
+            <div class="cols"> 
+              <div class="col-md-4 dscroll">
+                <article class="article--table">
+                  <div class="article__bg">
+                    <div class="bg"><img src="img/uploads/1.jpg"></div>
+                  </div>
+                  <div class="article__body"> 
+                    <h4 class="article__title"><a href="#">Libero habitant aenean colus platea purus</a></h4><a href="#" class="btn btn--min btn--transparent">Ver más<span class="fa fa-long-arrow-right"></span></a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-4 dscroll">
+                <article class="article--table">
+                  <div class="article__bg">
+                    <div class="bg"><img src="img/uploads/2.jpg"></div>
+                  </div>
+                  <div class="article__body"> 
+                    <h4 class="article__title"><a href="#">Convallis fermentum proin quis venenatis pellentesque</a></h4><a href="#" class="btn btn--min btn--transparent">Ver más<span class="fa fa-long-arrow-right"></span></a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-4 dscroll">
+                <article class="article--table">
+                  <div class="article__bg">
+                    <div class="bg"><img src="img/uploads/3.jpg"></div>
+                  </div>
+                  <div class="article__body"> 
+                    <h4 class="article__title"><a href="#">Felis porta arcu felis aenean facilisis</a></h4><a href="#" class="btn btn--min btn--transparent">Ver más<span class="fa fa-long-arrow-right"></span></a>
+                  </div>
+                </article>
               </div>
             </div>
           </div>

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=36356" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=36356" type="text/javascript"></script>
+    <link href="css/main.css?v=1810" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=1810" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -16,6 +18,10 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <header>
@@ -30,13 +36,14 @@
             </div>
             <div class="header__right">
               <div class="header__button"> <a href="#" class="btn">Hazte Socio</a></div>
-              <div class="header__button"> <a href="#" class="btn btn--dark">Contacto</a></div>
+              <div class="header__button"> <a href="contact.html" class="btn btn--dark">Contacto</a></div>
               <div class="header__button header__button--search--desktop"><a class="btn btn--social"><span class="fa fa-search"></span></a></div>
             </div>
           </div>
         </div>
       </div>
       <div class="header__secondary">
+        <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
             <input type="text" name="s" placeholder="Buscar producto">
@@ -61,11 +68,26 @@
                   <nav>
                     <ul>
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -83,12 +105,12 @@
                 <div class="header__nav__nav__header"> 
                   <div class="header__nav__isotipo"><img src="img/icons/logo-submenu-chiletec.png"></div>
                   <div class="header__nav__button"><a href="#" class="btn">Hazte Socio</a></div>
-                  <div class="header__nav__close">
+                  <div class="header__nav__back">
+                    <div></div>
                     <div></div>
                     <div></div>
                   </div>
-                  <div class="header__nav__back">
-                    <div></div>
+                  <div class="header__nav__close">
                     <div></div>
                     <div></div>
                   </div>
@@ -97,11 +119,27 @@
                   <div class="header__nav__nav__menu"> 
                     <ul> 
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -148,9 +186,9 @@
                   <div class="slide"> 
                     <div class="section__slide">
                       <div class="section__content"><span class="section__date">15 nov</span>
-                        <h1 class="section__title">Tempus imperdiet eu per ante nostra
+                        <h1 class="section__title">Augue tempus vestibulum eu gravida tellus
                         </h1>
-                        <p>Lacus sed ut hac primis vitae donec sollicitudin felis fusce orci aliquam.
+                        <p>Conubia sem pretium conubia tempus id dapibus eu duis justo netus eget.
                         </p><a href="#" class="btn">Ver más</a>
                       </div>
                       <div class="section__bg">
@@ -161,9 +199,9 @@
                   <div class="slide">
                     <div class="section__slide">
                       <div class="section__content"><span class="section__date">15 nov</span>
-                        <h1 class="section__title">Semper auctor erat pellentesque felis ut
+                        <h1 class="section__title">Iaculis posuere sociosqu fames magna pretium
                         </h1>
-                        <p>Auctor eu porta nec nunc phasellus eget iaculis massa sem placerat neque.
+                        <p>Bibendum curae porta fames justo justo sagittis convallis inceptos hendrerit ligula non.
                         </p><a href="#" class="btn">Ver más</a>
                       </div>
                       <div class="section__bg">
@@ -174,9 +212,9 @@
                   <div class="slide"> 
                     <div class="section__slide">
                       <div class="section__content"><span class="section__date">15 nov</span>
-                        <h1 class="section__title">Massa donec nibh augue cursus sed
+                        <h1 class="section__title">Nibh himenaeos fringilla nam euismod dictum
                         </h1>
-                        <p>Potenti eu conubia viverra aenean praesent faucibus elementum proin molestie auctor pretium.
+                        <p>Aptent habitant non purus nisl non dapibus nisi lectus fames feugiat mauris.
                         </p><a href="#" class="btn">Ver más</a>
                       </div>
                       <div class="section__bg">
@@ -187,9 +225,9 @@
                   <div class="slide"> 
                     <div class="section__slide">
                       <div class="section__content"><span class="section__date">15 nov</span>
-                        <h1 class="section__title">Magna inceptos sed a vestibulum proin
+                        <h1 class="section__title">Dapibus suspendisse adipiscing orci per pretium
                         </h1>
-                        <p>Habitant duis molestie curabitur ultrices lacus ornare nullam suscipit massa quisque quam.
+                        <p>Sociosqu sapien et ac quis in nibh justo scelerisque sapien fermentum urna.
                         </p><a href="#" class="btn">Ver más</a>
                       </div>
                       <div class="section__bg">
@@ -207,7 +245,7 @@
         <div class="section__wrap">
           <div class="section__body">
             <div class="cols">
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category"> 
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
@@ -217,7 +255,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category article--category--light"> 
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/2.jpg"></div>
@@ -227,7 +265,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category"> 
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/3.jpg"></div>
@@ -237,7 +275,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category article--category--light"> 
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/4.jpg"></div>
@@ -247,7 +285,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category article--category--light"> 
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
@@ -257,7 +295,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category">
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/2.jpg"></div>
@@ -267,7 +305,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category article--category--light"> 
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/3.jpg"></div>
@@ -277,7 +315,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--category">
                   <div class="article__bg">
                     <div class="bg"><img src="img/uploads/4.jpg"></div>
@@ -295,34 +333,34 @@
         <div class="section__wrap"> 
           <div class="section__body"> 
             <div class="cols"> 
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat">
                   <div class="article__body"> <span data-value="180" class="article__number">0</span>
-                    <p>Donec fringilla tempor dapibus netus nullam
+                    <p>Ligula quisque tortor nisl egestas velit
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat">
                   <div class="article__body"> <span data-value="200" class="article__number">0</span>
-                    <p>Vel sapien odio lobortis elementum adipiscing
+                    <p>Primis nec porttitor rhoncus sapien aenean
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat article--stat--after">
                   <div class="article__body"> <span data-value="180" class="article__number">0</span>
-                    <p>Consequat velit elementum tristique lacinia platea
+                    <p>Egestas egestas lectus nec mollis dictumst
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat">
                   <div class="article__body"> <span data-value="60" class="article__number">0</span>
-                    <p>Consequat pulvinar enim colus hac quis
+                    <p>Porttitor platea aenean vel eleifend diam
                     </p>
                   </div>
                 </article>
@@ -341,47 +379,47 @@
               <div class="col-md-8">
                 <div class="section__feeds">
                   <div class="cols">
-                    <div class="col-md-6">
+                    <div class="col-md-6 dscroll">
                       <article class="article--new">
                         <div class="article__hashtag"> <span>#Emprendimiento</span></div>
                         <div class="article__bg">
                           <div class="bg"><img src="img/uploads/1.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Neque id magna praesent aptent turpis</a></h4>
+                          <h4 class="article__title"><a href="#">Accumsan dui a lobortis bibendum ut</a></h4>
                         </div>
                       </article>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 dscroll">
                       <article class="article--new">
                         <div class="article__hashtag"> <span>#Corporativo</span></div>
                         <div class="article__bg">
                           <div class="bg"><img src="img/uploads/2.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Nibh torquent pharetra elementum senectus curae</a></h4>
+                          <h4 class="article__title"><a href="#">Neque tempus aliquet id et massa</a></h4>
                         </div>
                       </article>
                     </div>
-                    <div class="col-md-6"> 
+                    <div class="col-md-6 dscroll"> 
                       <article class="article--new">
                         <div class="article__hashtag"> <span>#Gobierno</span></div>
                         <div class="article__bg">
                           <div class="bg"><img src="img/uploads/3.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Vivamus diam hac lobortis sed fames</a></h4>
+                          <h4 class="article__title"><a href="#">Facilisis primis quisque nullam mollis nulla</a></h4>
                         </div>
                       </article>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 dscroll">
                       <article class="article--new">
                         <div class="article__hashtag"> <span>#Universidad</span></div>
                         <div class="article__bg">
                           <div class="bg"><img src="img/uploads/4.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Vestibulum potenti laoreet quis morbi etiam</a></h4>
+                          <h4 class="article__title"><a href="#">Donec condimentum taciti tristique sagittis cursus</a></h4>
                         </div>
                       </article>
                     </div>
@@ -390,7 +428,7 @@
               </div>
               <div class="col-md-4">
                 <div class="section__events"> 
-                  <article class="article--eventmain">
+                  <article class="article--eventmain dscroll">
                     <div class="article__bg"> 
                       <div class="bg"><img src="img/uploads/3.jpg"></div>
                     </div>
@@ -411,7 +449,7 @@
       </section>
       <section class="section--banner">
         <div class="section__wrap"> 
-          <div class="section__body"> 
+          <div class="section__body dscroll"> 
             <div class="cols">
               <div class="col-md-3">
                 <div class="section__banner">
@@ -440,36 +478,36 @@
             <div class="cols cols-gutter-2"> 
               <div class="col-md-8">
                 <div class="section__news">
-                  <article class="article--new article--new--big">
+                  <article class="article--new article--new--big dscroll">
                     <div class="article__hashtag"> <span>#Universidad</span></div>
                     <div class="article__bg">
                       <div class="bg"><img src="img/uploads/1.jpg"></div>
                     </div>
                     <div class="article__body">
-                      <h4 class="article__title"><a href="#">Convallis tellus erat dapibus aliquet orci</a></h4>
-                      <p>Aliquam nisi tempus fringilla nulla sed curabitur vestibulum dui volutpat suspendisse inceptos ut eleifend sollicitudin.
+                      <h4 class="article__title"><a href="#">Mattis aliquet justo fusce felis litora</a></h4>
+                      <p>In molestie fames etiam litora etiam luctus hendrerit semper sociosqu sagittis imperdiet varius potenti curabitur.
                       </p><a href="#" class="btn btn--min">Ver más</a>
                     </div>
                   </article>
-                  <article class="article--new article--new--big">
+                  <article class="article--new article--new--big dscroll">
                     <div class="article__hashtag"> <span>#Universidad</span></div>
                     <div class="article__bg">
                       <div class="bg"><img src="img/uploads/2.jpg"></div>
                     </div>
                     <div class="article__body">
-                      <h4 class="article__title"><a href="#">Quam proin erat mauris nostra tortor</a></h4>
-                      <p>Pulvinar ultricies sagittis litora in primis eros sapien curae luctus quis interdum elit in semper.
+                      <h4 class="article__title"><a href="#">Adipiscing fames venenatis cubilia pellentesque orci</a></h4>
+                      <p>Quis malesuada varius fames potenti dictumst vitae vulputate imperdiet aenean mauris eu potenti aptent pharetra.
                       </p><a href="#" class="btn btn--min">Ver más</a>
                     </div>
                   </article>
-                  <article class="article--new article--new--big">
+                  <article class="article--new article--new--big dscroll">
                     <div class="article__hashtag"> <span>#Universidad</span></div>
                     <div class="article__bg">
                       <div class="bg"><img src="img/uploads/3.jpg"></div>
                     </div>
                     <div class="article__body">
-                      <h4 class="article__title"><a href="#">Consectetur tellus nec ullamcorper sociosqu laoreet</a></h4>
-                      <p>Neque laoreet sociosqu arcu quisque taciti integer cubilia vitae vel tincidunt placerat sodales mauris etiam.
+                      <h4 class="article__title"><a href="#">Tortor posuere venenatis velit sodales euismod</a></h4>
+                      <p>Consequat ullamcorper eget torquent luctus vehicula sed habitant quam colus sapien suspendisse mattis nec vulputate.
                       </p><a href="#" class="btn btn--min">Ver más</a>
                     </div>
                   </article>
@@ -477,7 +515,7 @@
                 <div class="section__button"> <a href="#" class="btn btn--white">Ver todas las noticias </a></div>
               </div>
               <div class="col-md-4">
-                <div class="section__opinions">
+                <div class="section__opinions dscroll">
                   <div class="section__opinions__header">
                     <h3 class="section__title">Que opinamos?</h3>
                   </div>
@@ -485,23 +523,23 @@
                     <article class="article--opinion"> 
                       <div class="article__body"> 
                         <div class="article__avatar"> <img src="img/avatars/1.png"></div>
-                        <h4 class="article__title"><a href="#">Condimentum maecenas primis class nam</a></h4>
+                        <h4 class="article__title"><a href="#">Convallis enim magna accumsan ut</a></h4>
                       </div>
                     </article>
                     <article class="article--opinion"> 
                       <div class="article__body"> 
                         <div class="article__avatar"> <img src="img/avatars/2.png"></div>
-                        <h4 class="article__title"><a href="#">Laoreet est facilisis fringilla hendrerit</a></h4>
+                        <h4 class="article__title"><a href="#">Aliquam per dapibus at himenaeos</a></h4>
                       </div>
                     </article>
                     <article class="article--opinion"> 
                       <div class="article__body"> 
                         <div class="article__avatar"> <img src="img/avatars/3.png"></div>
-                        <h4 class="article__title"><a href="#">Velit cras congue etiam mauris</a></h4>
+                        <h4 class="article__title"><a href="#">Dapibus cubilia nibh est vel</a></h4>
                       </div>
                     </article>
                   </div>
-                  <div class="section__opinions__footer">
+                  <div class="section__opinions__footer dscroll">
                     <div class="section__worker"> 
                       <div class="section__bg">
                         <div class="bg"> <img src="img/uploads/image-worker.png"></div>
@@ -588,7 +626,7 @@
             <div class="section__flex">
               <div class="section__content"> 
                 <h3 class="h2 section__title">Nuestro directorio</h3>
-                <p>Urna ultricies adipiscing ultrices netus vivamus cursus est auctor habitant lacus ligula non litora morbi.
+                <p>Aliquam sed a senectus metus tempus risus lacinia accumsan nam morbi sodales phasellus platea dui.
                 </p><a href="#" class="btn btn--transparent">Ver empresas</a>
               </div>
               <div class="section__image"><img src="img/uploads/image-directory.png"></div>

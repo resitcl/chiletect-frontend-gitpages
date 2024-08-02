@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=20366" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=20366" type="text/javascript"></script>
+    <link href="css/main.css?v=32158" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=32158" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -16,6 +18,10 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <header>
@@ -30,13 +36,14 @@
             </div>
             <div class="header__right">
               <div class="header__button"> <a href="#" class="btn">Hazte Socio</a></div>
-              <div class="header__button"> <a href="#" class="btn btn--dark">Contacto</a></div>
+              <div class="header__button"> <a href="contact.html" class="btn btn--dark">Contacto</a></div>
               <div class="header__button header__button--search--desktop"><a class="btn btn--social"><span class="fa fa-search"></span></a></div>
             </div>
           </div>
         </div>
       </div>
       <div class="header__secondary">
+        <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
             <input type="text" name="s" placeholder="Buscar producto">
@@ -61,11 +68,26 @@
                   <nav>
                     <ul>
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -83,12 +105,12 @@
                 <div class="header__nav__nav__header"> 
                   <div class="header__nav__isotipo"><img src="img/icons/logo-submenu-chiletec.png"></div>
                   <div class="header__nav__button"><a href="#" class="btn">Hazte Socio</a></div>
-                  <div class="header__nav__close">
+                  <div class="header__nav__back">
+                    <div></div>
                     <div></div>
                     <div></div>
                   </div>
-                  <div class="header__nav__back">
-                    <div></div>
+                  <div class="header__nav__close">
                     <div></div>
                     <div></div>
                   </div>
@@ -97,11 +119,27 @@
                   <div class="header__nav__nav__menu"> 
                     <ul> 
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -153,9 +191,9 @@
                     <li class="breadcrumb-item"><a href="#"><span>Nosotros</span></a></li>
                   </ol>
                 </nav>
-                <h1 class="section__title">Enim habitasse platea tempor semper
+                <h1 class="section__title">Placerat bibendum vel ad integer
                 </h1>
-                <p class="section__description">Non lacinia nulla suspendisse ornare volutpat mi mattis urna lacus. Posuere pharetra dapibus mattis phasellus vulputate dictum feugiat curae elit sodales varius nullam mollis tortor.
+                <p class="section__description">Hac nam orci justo condimentum ultrices porta at inceptos facilisis. Ultricies taciti sociosqu mauris augue nam mauris dictum auctor elementum phasellus inceptos hendrerit consequat porta.
                 </p>
               </div>
               <div class="section__image"> <img src="img/uploads/1.jpg"></div>
@@ -168,18 +206,18 @@
           <div class="section__body"> 
             <div class="cols"> 
               <div class="section__flex"> 
-                <div class="col-md-5">
+                <div class="col-md-5 dscroll">
                   <div class="section__info"> 
                     <div class="section__bg"> 
                       <div class="bg"><img src="img/uploads/image-testimony.png"></div>
                     </div><span class="section__tag">Desde 1995</span>
                     <div class="section__info__body">
-                      <p>Aliquam donec hac bibendum pretium curabitur cubilia ut
+                      <p>Habitant fusce phasellus justo non pulvinar colus suscipit
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 dscroll">
                   <div class="section__testimony"> 
                     <div class="section__avatar"><img src="img/avatars/1.png"></div>
                     <blockquote>“Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis odit fugit ad minima id quia ut mollitia non autem.“</blockquote>
@@ -201,42 +239,42 @@
           </div>
           <div class="section__body"> 
             <div class="cols"> 
-              <div class="col-md-3">
+              <div class="col-md-3 dscroll">
                 <article class="article--value">
                   <div class="article__icon"> <img src="img/icons/icon-value-1.svg"></div>
                   <div class="article__body"> 
                     <h4 class="article__title">Valor 01</h4>
-                    <p>Metus vel enim adipiscing accumsan nisi volutpat nulla leo volutpat colus eu.
+                    <p>Diam sapien odio ornare pellentesque justo conubia nisi fringilla risus nisl eu.
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 dscroll">
                 <article class="article--value">
                   <div class="article__icon"> <img src="img/icons/icon-value-2.svg"></div>
                   <div class="article__body"> 
                     <h4 class="article__title">Valor 02</h4>
-                    <p>Donec commodo cursus purus erat interdum aenean augue sodales cras donec sociosqu.
+                    <p>Felis vulputate platea odio ligula consequat elementum interdum neque fermentum tristique massa.
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 dscroll">
                 <article class="article--value">
                   <div class="article__icon"> <img src="img/icons/icon-value-3.svg"></div>
                   <div class="article__body"> 
                     <h4 class="article__title">Valor 03</h4>
-                    <p>Auctor orci bibendum vel lectus dui ac duis vulputate suspendisse maecenas at.
+                    <p>A curabitur fringilla vehicula dui inceptos odio congue auctor sagittis fames vehicula.
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 dscroll">
                 <article class="article--value">
                   <div class="article__icon"> <img src="img/icons/icon-value-4.svg"></div>
                   <div class="article__body"> 
                     <h4 class="article__title">Valor 04</h4>
-                    <p>Orci posuere laoreet lacus in fringilla lobortis morbi nam lacinia mollis aliquam.
+                    <p>Congue feugiat phasellus sodales lacinia odio vivamus facilisis mi fusce morbi aliquam.
                     </p>
                   </div>
                 </article>
@@ -249,34 +287,34 @@
         <div class="section__wrap"> 
           <div class="section__body"> 
             <div class="cols"> 
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat">
                   <div class="article__body"> <span data-value="180" class="article__number">0</span>
-                    <p>Quam cras lobortis dictum duis cursus
+                    <p>Viverra dictumst egestas litora suscipit curabitur
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat">
                   <div class="article__body"> <span data-value="200" class="article__number">0</span>
-                    <p>Adipiscing diam sollicitudin augue purus dictumst
+                    <p>Turpis sed inceptos curabitur malesuada aliquet
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat article--stat--after">
                   <div class="article__body"> <span data-value="180" class="article__number">0</span>
-                    <p>Sollicitudin pulvinar sollicitudin semper aliquam litora
+                    <p>Gravida vitae vestibulum fusce nullam eleifend
                     </p>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-xs-6 col-md-3 dscroll">
                 <article class="article--stat">
                   <div class="article__body"> <span data-value="60" class="article__number">0</span>
-                    <p>Netus malesuada potenti ultrices morbi nec
+                    <p>Luctus consequat congue orci aptent morbi
                     </p>
                   </div>
                 </article>
@@ -293,82 +331,82 @@
           <div class="section__body"> 
             <div class="section__teams"> 
               <div class="cols">
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/1.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Neque neque
+                      <p class="article__position">Faucibus aenean
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/2.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Suspendisse posuere
+                      <p class="article__position">Fermentum tempor
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/3.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Quisque condimentum
+                      <p class="article__position">Curae lobortis
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/4.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Nisl aliquam
+                      <p class="article__position">Facilisis sed
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/4.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Nunc torquent
+                      <p class="article__position">Urna accumsan
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/3.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Platea id
+                      <p class="article__position">Varius cursus
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/2.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Non aliquam
+                      <p class="article__position">Nec lacus
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/1.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Magna lobortis
+                      <p class="article__position">Platea interdum
                       </p>
                     </div>
                   </article>
@@ -386,82 +424,82 @@
           <div class="section__body"> 
             <div class="section__teams"> 
               <div class="cols">
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team">
                     <div class="article__avatar"> <img src="img/avatars/1.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Lacus nostra
+                      <p class="article__position">Senectus condimentum
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/2.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Vehicula primis
+                      <p class="article__position">Interdum colus
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/3.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Ante consectetur
+                      <p class="article__position">Lacinia leo
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/4.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Id tristique
+                      <p class="article__position">Sed colus
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/4.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Conubia lobortis
+                      <p class="article__position">Dictumst semper
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/3.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Quam nisl
+                      <p class="article__position">Vestibulum aliquet
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/2.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Feugiat volutpat
+                      <p class="article__position">Laoreet mollis
                       </p>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 dscroll">
                   <article class="article--team"> 
                     <div class="article__avatar"> <img src="img/avatars/1.png"></div>
                     <div class="article__body">
                       <p class="article__name">Nombre y apellido</p>
-                      <p class="article__position">Volutpat cubilia
+                      <p class="article__position">Dictum litora
                       </p>
                     </div>
                   </article>
@@ -479,50 +517,50 @@
           </div>
           <div class="section__body">
             <div class="cols cols-gutter-2"> 
-              <div class="col-md-3"> 
+              <div class="col-md-3 dscroll">
                 <article class="article--transparent">
                   <div class="article__bg">
                     <div class="article__download"> <img src="img/icons/icon-download.png"></div>
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Blandit aenean curabitur iaculis rhoncus conubia</a></h4>
+                    <h4 class="article__title"><a href="#">Semper ante viverra placerat aenean aenean</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-3"> 
+              <div class="col-md-3 dscroll">
                 <article class="article--transparent">
                   <div class="article__bg">
                     <div class="article__download"> <img src="img/icons/icon-download.png"></div>
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Dapibus adipiscing odio egestas litora nulla</a></h4>
+                    <h4 class="article__title"><a href="#">Fames rutrum lacinia ut imperdiet diam</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-3"> 
+              <div class="col-md-3 dscroll">
                 <article class="article--transparent">
                   <div class="article__bg">
                     <div class="article__download"> <img src="img/icons/icon-download.png"></div>
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Per sagittis risus fermentum at adipiscing</a></h4>
+                    <h4 class="article__title"><a href="#">Est adipiscing pretium dictum egestas torquent</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-3"> 
+              <div class="col-md-3 dscroll">
                 <article class="article--transparent">
                   <div class="article__bg">
                     <div class="article__download"> <img src="img/icons/icon-download.png"></div>
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Proin libero leo habitant sodales vulputate</a></h4>
+                    <h4 class="article__title"><a href="#">Nulla litora sagittis ac cubilia himenaeos</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=36684" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=36684" type="text/javascript"></script>
+    <link href="css/main.css?v=63439" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=63439" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -16,6 +18,10 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <header>
@@ -30,13 +36,14 @@
             </div>
             <div class="header__right">
               <div class="header__button"> <a href="#" class="btn">Hazte Socio</a></div>
-              <div class="header__button"> <a href="#" class="btn btn--dark">Contacto</a></div>
+              <div class="header__button"> <a href="contact.html" class="btn btn--dark">Contacto</a></div>
               <div class="header__button header__button--search--desktop"><a class="btn btn--social"><span class="fa fa-search"></span></a></div>
             </div>
           </div>
         </div>
       </div>
       <div class="header__secondary">
+        <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
             <input type="text" name="s" placeholder="Buscar producto">
@@ -61,11 +68,26 @@
                   <nav>
                     <ul>
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -83,12 +105,12 @@
                 <div class="header__nav__nav__header"> 
                   <div class="header__nav__isotipo"><img src="img/icons/logo-submenu-chiletec.png"></div>
                   <div class="header__nav__button"><a href="#" class="btn">Hazte Socio</a></div>
-                  <div class="header__nav__close">
+                  <div class="header__nav__back">
+                    <div></div>
                     <div></div>
                     <div></div>
                   </div>
-                  <div class="header__nav__back">
-                    <div></div>
+                  <div class="header__nav__close">
                     <div></div>
                     <div></div>
                   </div>
@@ -97,11 +119,27 @@
                   <div class="header__nav__nav__menu"> 
                     <ul> 
                       <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
-                      <li class="header__nav__li"><a href="#">Iniciativas</a></li>
-                      <li class="header__nav__li"><a href="#">Impacto</a></li>
-                      <li class="header__nav__li"><a href="#">Noticias</a></li>
-                      <li class="header__nav__li"><a href="#">Eventos</a></li>
-                      <li class="header__nav__li"><a href="#">Socios</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -153,12 +191,80 @@
                     <li class="breadcrumb-item"><a href="#"><span>Agente  Operador</span></a></li>
                   </ol>
                 </nav>
-                <h1 class="section__title">Viverra feugiat eleifend mauris nec
+                <h1 class="section__title">Purus cubilia magna leo per
                 </h1>
-                <p class="section__description">Pretium libero et platea elementum feugiat etiam posuere pretium taciti. Erat ut donec venenatis et dapibus dictumst sagittis id turpis congue aptent auctor ornare consequat.
+                <p class="section__description">Blandit aliquam suscipit dapibus porttitor cras imperdiet fermentum feugiat torquent. Duis quis fames nunc facilisis nisl semper nunc torquent a feugiat imperdiet libero fringilla netus.
                 </p>
               </div>
-              <div class="section__image"> <img src="img/uploads/1.jpg"></div>
+              <div class="section__image"> <img src="img/uploads/3.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--agentoperator"> 
+        <div class="section__wrap section--md"> 
+          <div class="section__body"> 
+            <div class="section__agentoperator">
+              <article class="article--agentoperator dscroll">
+                <div class="article__flex"> 
+                  <div class="article__header"> 
+                    <div class="article__tags"> <span>AI & ML</span><span>GOBIERNO</span></div>
+                    <h3 class="article__title">Aliquam posuere maecenas vehicula sed tincidunt
+                    </h3>
+                    <p>Convallis faucibus pellentesque rutrum orci cursus curae consequat posuere iaculis cursus aliquet.
+                    </p>
+                  </div>
+                  <div class="article__footer"> <a href="single-licitacion.html" class="btn btn--white">Postular aquí</a></div>
+                </div>
+              </article>
+              <article class="article--agentoperator dscroll">
+                <div class="article__flex"> 
+                  <div class="article__header"> 
+                    <div class="article__tags"> <span>AI & ML</span><span>GOBIERNO</span></div>
+                    <h3 class="article__title">Senectus turpis sed vitae leo faucibus
+                    </h3>
+                    <p>Purus viverra praesent nam himenaeos ad aenean leo at litora vehicula pretium.
+                    </p>
+                  </div>
+                  <div class="article__footer"> <a href="single-licitacion.html" class="btn btn--white">Postular aquí</a></div>
+                </div>
+              </article>
+              <article class="article--agentoperator dscroll">
+                <div class="article__flex"> 
+                  <div class="article__header"> 
+                    <div class="article__tags"> <span>AI & ML</span><span>GOBIERNO</span></div>
+                    <h3 class="article__title">Sodales ultricies elementum nullam scelerisque porttitor
+                    </h3>
+                    <p>Ultricies litora cursus aliquam dui praesent aliquam molestie sagittis nisl dui laoreet.
+                    </p>
+                  </div>
+                  <div class="article__footer"> <a href="single-licitacion.html" class="btn btn--white">Postular aquí</a></div>
+                </div>
+              </article>
+              <article class="article--agentoperator dscroll">
+                <div class="article__flex"> 
+                  <div class="article__header"> 
+                    <div class="article__tags"> <span>AI & ML</span><span>GOBIERNO</span></div>
+                    <h3 class="article__title">Tristique augue quis dui odio curae
+                    </h3>
+                    <p>Potenti praesent sollicitudin metus suspendisse lacinia potenti tempor gravida cras quisque scelerisque.
+                    </p>
+                  </div>
+                  <div class="article__footer"> <a href="single-licitacion.html" class="btn btn--white">Postular aquí</a></div>
+                </div>
+              </article>
+              <article class="article--agentoperator dscroll">
+                <div class="article__flex"> 
+                  <div class="article__header"> 
+                    <div class="article__tags"> <span>AI & ML</span><span>GOBIERNO</span></div>
+                    <h3 class="article__title">Commodo fermentum nunc vehicula curae aliquam
+                    </h3>
+                    <p>Sem dictum primis arcu magna mollis aenean lacinia turpis mollis nulla ut.
+                    </p>
+                  </div>
+                  <div class="article__footer"> <a href="single-licitacion.html" class="btn btn--white">Postular aquí</a></div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -178,7 +284,7 @@
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Tempor quam venenatis eu odio fermentum</a></h4>
+                    <h4 class="article__title"><a href="#">Sed neque netus feugiat consectetur torquent</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>
@@ -190,7 +296,7 @@
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Nullam vel semper primis id in</a></h4>
+                    <h4 class="article__title"><a href="#">Non sodales ante nunc magna ligula</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>
@@ -202,7 +308,7 @@
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Pharetra sapien donec morbi vitae ante</a></h4>
+                    <h4 class="article__title"><a href="#">Sollicitudin potenti fusce mollis ultricies morbi</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>
@@ -214,7 +320,7 @@
                     <div class="bg"><img src="img/uploads/1.jpg"></div>
                   </div>
                   <div class="article__body">
-                    <h4 class="article__title"><a href="#">Quam eleifend diam luctus nunc eros</a></h4>
+                    <h4 class="article__title"><a href="#">Faucibus habitasse luctus est hendrerit dui</a></h4>
                     <p class="article__date">05 nov 2024</p>
                   </div>
                 </article>

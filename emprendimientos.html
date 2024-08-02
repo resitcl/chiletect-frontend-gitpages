@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Chiletec</title>
+    <meta charset="UTF-8">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/main.css?v=17129" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=17129" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <!-- Meta tags facebook-->
+    <meta property="og:title" content="#">
+    <meta property="og:description" content="#">
+    <meta property="og:image" content="#">
+    <!-- Meta tags twitter cards-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#">
+    <meta name="twitter:description" content="#">
+    <meta name="twitter:image" content="#">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__primary">
+        <div class="header__wrap">
+          <div class="header__inner">
+            <div class="header__socials">
+              <div class="header__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="header__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
+              <div class="header__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
+              <div class="header__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>
+            </div>
+            <div class="header__right">
+              <div class="header__button"> <a href="#" class="btn">Hazte Socio</a></div>
+              <div class="header__button"> <a href="contact.html" class="btn btn--dark">Contacto</a></div>
+              <div class="header__button header__button--search--desktop"><a class="btn btn--social"><span class="fa fa-search"></span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__secondary">
+        <div class="header__bg"></div>
+        <div class="header__search">
+          <form action="search.html" method="get"><span class="fa fa-search"></span>
+            <input type="text" name="s" placeholder="Buscar producto">
+          </form>
+        </div>
+        <div class="header__wrap">
+          <div class="header__inner">
+            <div class="header__logo"><a href="index.html"><img src="img/icons/logo-chiletec.png"></a></div>
+            <div class="header__nav">
+              <div class="header__nav__bg"></div>
+              <div class="header__nav__nav">
+                <div class="header__nav__close">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="header__nav__back">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="header__menu">
+                  <nav>
+                    <ul>
+                      <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="header__right">
+              <div class="header__item header__item--search--mobile"><span class="fa fa-search"></span></div>
+              <div class="header__item header__item--ham">
+                <div class="header__ham"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="header__nav__mobile">
+              <div class="header__nav__opacity"> </div>
+              <div class="header__nav__nav">
+                <div class="header__nav__nav__header"> 
+                  <div class="header__nav__isotipo"><img src="img/icons/logo-submenu-chiletec.png"></div>
+                  <div class="header__nav__button"><a href="#" class="btn">Hazte Socio</a></div>
+                  <div class="header__nav__back">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div class="header__nav__close">
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="header__nav__nav__body">
+                  <div class="header__nav__nav__menu"> 
+                    <ul> 
+                      <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav__nav__footer">
+                  <div class="header__nav__nav__footer__infos">
+                    <div class="header__nav__nav__footer__info">
+                      <p>+569 332 361 02<span class="fa fa-phone"></span></p>
+                    </div>
+                    <div class="header__nav__nav__footer__info">
+                      <p>info@chiletec.org<span class="fa fa-envelope"></span></p>
+                    </div>
+                  </div>
+                  <div class="header__nav__nav__footer__links">
+                    <ul>
+                      <li><a href="#">Pago Online</a></li>
+                      <li><a href="#">Repositorio</a></li>
+                      <li><a href="#">Contacto</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__nav__nav__footer__socials">
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-facebook"></span></a></div>
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-instagram"></span></a></div>
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-linkedin"></span></a></div>
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-youtube"></span></a></div>
+                  </div>
+                  <div class="header__nav__nav__footer__bottom">
+                    <h4>Chiletec 2024</h4>
+                    <p>Todos los derechos reservados</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="sections">
+      <section class="section--header">
+        <div class="section__bg">
+          <div class="bg"> <img src="img/uploads/background-header.png"></div>
+        </div>
+        <div class="section__wrap section__wrap--header">
+          <div class="section__body">
+            <div class="section__flex">
+              <div class="section__content">
+                <nav>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><span>Inicio</span></a></li>
+                    <li class="breadcrumb-item"><a href="#"><span>Emprendimientos</span></a></li>
+                  </ol>
+                </nav>
+                <h1 class="section__title">Aliquam hac volutpat augue scelerisque
+                </h1>
+                <p class="section__description">Primis senectus ultrices vestibulum quam imperdiet pretium eu hac ut. Molestie vel tortor phasellus nullam bibendum eu hendrerit leo ante fermentum hac aenean pulvinar senectus.
+                </p>
+              </div>
+              <div class="section__image"> <img src="img/uploads/1.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--partners">
+        <div class="section__wrap">
+          <div class="section__header">
+            <h3 class="section__title">Nuestras alianzas</h3>
+          </div>
+        </div>
+        <div class="section__body">
+          <div class="section__partners">
+            <div class="swiper-container swiper-partners">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> 
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/1.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/2.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/3.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/4.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/5.jpg"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/1.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/2.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/3.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/4.png"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="section__client">
+                    <div class="section__icon"><a href="#"><img src="img/partners/5.jpg"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--entrepreneurship">
+        <div class="section__wrap"> 
+          <div class="section__body">
+            <div class="section__tabs"> 
+              <div class="tabs tabs--entrepreneurship">
+                <div class="tabs__header"> 
+                  <div class="tab tab--current">Alianzas y redes</div>
+                  <div class="tab">Coaching y capacitación    </div>
+                  <div class="tab">Red de mentores </div>
+                  <div class="tab">Capital Humano y monitoreo constante</div>
+                </div>
+                <div class="tabs__body">
+                  <div class="tab tab--current">
+                    <div class="section__box"> 
+                      <div class="section__bg">
+                        <div class="bg"><img src="img/uploads/1.jpg"></div>
+                      </div>
+                      <div class="section__content">
+                        <p>Dui quam suscipit suscipit pretium auctor donec fringilla primis libero. Magna eros proin aliquet erat vehicula sodales mauris sed curae consectetur posuere massa molestie quisque.
+                        </p>
+                        <p>Nec quis dictumst dapibus congue nisi erat hac risus per quisque pharetra eros ligula gravida.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="section__box"> 
+                      <div class="section__bg">
+                        <div class="bg"><img src="img/uploads/2.jpg"></div>
+                      </div>
+                      <div class="section__content">
+                        <p>Tortor ut eleifend facilisis nostra elementum lobortis consequat consequat aliquam. Cubilia felis consequat sociosqu elementum himenaeos iaculis pharetra congue cras suscipit metus accumsan quam interdum.
+                        </p>
+                        <p>Dapibus aenean conubia in quisque neque tellus risus venenatis commodo euismod quam est aliquet etiam.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="section__box"> 
+                      <div class="section__bg">
+                        <div class="bg"><img src="img/uploads/3.jpg"></div>
+                      </div>
+                      <div class="section__content">
+                        <p>Diam tristique nullam vel porttitor tempus diam nibh tellus condimentum. Scelerisque eleifend sem sed auctor blandit semper placerat eros placerat maecenas dictumst justo semper himenaeos.
+                        </p>
+                        <p>Nec lacus pretium fringilla varius dapibus elit quam lobortis maecenas inceptos dui leo quisque posuere.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="section__box"> 
+                      <div class="section__bg">
+                        <div class="bg"><img src="img/uploads/4.jpg"></div>
+                      </div>
+                      <div class="section__content">
+                        <p>Lacinia praesent molestie habitant sagittis sollicitudin faucibus aliquet class velit. Suscipit nisi posuere nisl conubia ultricies semper sociosqu morbi pellentesque mauris ultricies praesent turpis varius.
+                        </p>
+                        <p>Tempor eros euismod proin metus elit accumsan duis quisque fames tristique blandit nam aliquet gravida.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--differences">
+        <div class="section__bg">
+          <div class="bg"><img src="img/uploads/background-header.png"></div>
+        </div>
+        <div class="section__wrap">
+          <div class="section__header"> 
+            <h3 class="section__title">Que nos diferencia:</h3>
+          </div>
+          <div class="section__body">
+            <div class="cols">
+              <div class="col-md-3 dscroll">
+                <article class="article--difference">
+                  <div class="article__header"> 
+                    <h4 class="article__title">Participación</h4>
+                  </div>
+                  <div class="article__body">
+                    <p>ChileTec no solicita ningún tipo de participación del proyecto, ya sea en el porcentaje del emprendimiento o cobros financieros asociados.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-3 dscroll">
+                <article class="article--difference">
+                  <div class="article__header"> 
+                    <h4 class="article__title">Autonomía de trabajo</h4>
+                  </div>
+                  <div class="article__body">
+                    <p>Entregamos las herramientas necesarias para el desarrollo de los proyectos, pero no exigimos participación obligatoria en todas las actividades. Valoramos el tiempo de nuestros emprendedores y confiamos en sus decisiones.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-3 dscroll">
+                <article class="article--difference">
+                  <div class="article__header"> 
+                    <h4 class="article__title">Transparencia y confianza</h4>
+                  </div>
+                  <div class="article__body">
+                    <p>Generamos un alto nivel de confianza entre nuestros emprendedores, el capital humano de ChileTec y la entidad de CORFO, lo cual ha sido constantemente valorado.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-3 dscroll">
+                <article class="article--difference">
+                  <div class="article__header"> 
+                    <h4 class="article__title">Disponibilidad</h4>
+                  </div>
+                  <div class="article__body">
+                    <p>Nos destacamos por entregar un servicios comprometido de acuerdo a los requerimientos y necesidades de cada emprendedor.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--testimonies"> 
+        <div class="section__wrap"> 
+          <div class="section__header"> 
+            <h3 class="section__title">Testimonios </h3>
+          </div>
+          <div class="section__body">
+            <div class="swiper-container swiper-testimonies">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="article--testimony">
+                    <div class="article__flex"> 
+                      <div class="article__avatar"><img src="img/avatars/1.png"></div>
+                      <div class="article__content">
+                        <p>Maecenas porttitor imperdiet consequat eu fringilla fusce habitasse molestie nibh mi mollis aptent sapien justo.
+                        </p>
+                        <p class="article__name">Nombre y Apellido</p>
+                        <p class="article__position">Cargo - Emprendimiento</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="article--testimony">
+                    <div class="article__flex"> 
+                      <div class="article__avatar"><img src="img/avatars/2.png"></div>
+                      <div class="article__content">
+                        <p>Leo odio consequat senectus vulputate augue blandit vitae vehicula phasellus neque quisque cubilia curabitur sagittis.
+                        </p>
+                        <p class="article__name">Nombre y Apellido</p>
+                        <p class="article__position">Cargo - Emprendimiento</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="article--testimony">
+                    <div class="article__flex"> 
+                      <div class="article__avatar"><img src="img/avatars/3.png"></div>
+                      <div class="article__content">
+                        <p>At in aliquam curabitur arcu ultrices potenti facilisis nibh tempor interdum elit taciti laoreet iaculis.
+                        </p>
+                        <p class="article__name">Nombre y Apellido</p>
+                        <p class="article__position">Cargo - Emprendimiento</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="article--testimony">
+                    <div class="article__flex"> 
+                      <div class="article__avatar"><img src="img/avatars/4.png"></div>
+                      <div class="article__content">
+                        <p>Vitae porta ultrices quisque orci nunc congue erat ante nulla semper convallis hendrerit diam dictum.
+                        </p>
+                        <p class="article__name">Nombre y Apellido</p>
+                        <p class="article__position">Cargo - Emprendimiento</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="article--testimony">
+                    <div class="article__flex"> 
+                      <div class="article__avatar"><img src="img/avatars/1.png"></div>
+                      <div class="article__content">
+                        <p>Diam et at nunc metus felis laoreet adipiscing aliquam risus hac class ligula phasellus feugiat.
+                        </p>
+                        <p class="article__name">Nombre y Apellido</p>
+                        <p class="article__position">Cargo - Emprendimiento</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="swiper-bullets"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--news"> 
+        <div class="section__wrap">
+          <div class="section__header"> 
+            <h3 class="section__title">Noticias emprendedores</h3>
+          </div>
+          <div class="section__body"> 
+            <div class="section__news">
+              <div class="cols">
+                <div class="col-md-3 dscroll">
+                  <article class="article--new">
+                    <div class="article__hashtag"> <span>#Emprendimiento</span></div>
+                    <div class="article__bg">
+                      <div class="bg"><img src="img/uploads/1.jpg"></div>
+                    </div>
+                    <div class="article__body">
+                      <h4 class="article__title"><a href="#">Purus dapibus est in mauris risus</a></h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-3 dscroll">
+                  <article class="article--new">
+                    <div class="article__hashtag"> <span>#Corporativo</span></div>
+                    <div class="article__bg">
+                      <div class="bg"><img src="img/uploads/2.jpg"></div>
+                    </div>
+                    <div class="article__body">
+                      <h4 class="article__title"><a href="#">Euismod suscipit aptent metus ante tristique</a></h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-3 dscroll"> 
+                  <article class="article--new">
+                    <div class="article__hashtag"> <span>#Gobierno</span></div>
+                    <div class="article__bg">
+                      <div class="bg"><img src="img/uploads/3.jpg"></div>
+                    </div>
+                    <div class="article__body">
+                      <h4 class="article__title"><a href="#">Vitae iaculis diam mi curae consectetur</a></h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-3 dscroll">
+                  <article class="article--new">
+                    <div class="article__hashtag"> <span>#Universidad</span></div>
+                    <div class="article__bg">
+                      <div class="bg"><img src="img/uploads/4.jpg"></div>
+                    </div>
+                    <div class="article__body">
+                      <h4 class="article__title"><a href="#">Metus congue aptent vulputate fermentum etiam</a></h4>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--contact">
+        <div class="section__bg">
+          <div class="bg"> <img src="img/uploads/background-header.png"></div>
+        </div>
+        <div class="section__wrap"> 
+          <div class="section__body"> 
+            <div class="cols">
+              <div class="section__flex"> 
+                <div class="col-md-5"> 
+                  <div class="section__content"> 
+                    <h3 class="h1 section__title">Contáctanos para obtener más información</h3>
+                  </div>
+                </div>
+                <div class="col-md-7"> 
+                  <div class="section__form">
+                    <form class="form"></form>
+                    <div class="cols"> 
+                      <div class="col-md-6"> 
+                        <div class="form__element"> 
+                          <div class="form__input"> 
+                            <input type="text" placeholder="Nombre">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6"> 
+                        <div class="form__element"> 
+                          <div class="form__input"> 
+                            <input type="text" placeholder="Empresa">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6"> 
+                        <div class="form__element"> 
+                          <div class="form__input"> 
+                            <input type="text" placeholder="E-mail">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6"> 
+                        <div class="form__element"> 
+                          <div class="form__input"> 
+                            <select name="#">
+                              <option disable selected>Región</option>
+                              <option value="#">Lorem ipsum</option>
+                              <option value="#">Lorem ipsum</option>
+                              <option value="#">Lorem ipsum</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12"> 
+                        <div class="form__element"> 
+                          <div class="form__input">
+                            <textarea value="#" placeholder="Comentarios ..."></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form__button">
+                          <button class="btn">Enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer__primary">
+        <div class="footer__eff"> <img src="img/icons/eff-footer.png"></div>
+        <div class="footer__wrap">
+          <div class="footer__flex">
+            <div class="footer__nav">
+              <h4>Nosotros</h4>
+              <ul>
+                <li><a href="#">Misión / Visión</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Directorio</a></li>
+                <li><a href="#">Equipo</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Iniciativas</h4>
+              <ul>
+                <li><a href="#">Charlas</a></li>
+                <li><a href="#">Workshops</a></li>
+                <li><a href="#">Mesas de Trabajo</a></li>
+                <li><a href="#">Agendes Operador</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Eventos</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Impacto</h4>
+              <ul>
+                <li><a href="#">Métricas</a></li>
+                <li><a href="#">Reportes</a></li>
+                <li><a href="#">Prensa</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Noticias</h4>
+              <ul>
+                <li><a href="#">Emprendimiento</a></li>
+                <li><a href="#">Gobierno</a></li>
+                <li><a href="#">Actividades</a></li>
+                <li><a href="#">Corporativo</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Socios</h4>
+              <ul>
+                <li><a href="#">Hazte socio</a></li>
+                <li><a href="#">Beneficios</a></li>
+                <li><a href="#">Nuestros Socios</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary"> 
+        <div class="footer__wrap footer__wrap--none">
+          <div class="footer__row"> 
+            <div class="footer__info"> 
+              <div class="footer__info__date"> <a href="#">+569 332 361 02<span class="fa fa-phone"></span></a></div>
+              <div class="footer__info__date"> <a href="#">info@chiletec.org<span class="fa fa-envelope"></span></a></div>
+            </div>
+            <div class="footer__links"> 
+              <div class="footer__link"><a href="#">Pago Online</a></div>
+              <div class="footer__link"><a href="#">Repositorio</a></div>
+              <div class="footer__link"><a href="#">Contacto</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary">					
+        <div class="footer__wrap footer__wrap--none">
+          <div class="footer__row">
+            <div class="footer__terms"> 
+              <div class="footer__link"> <a href="#">Políticas de uso</a></div>
+              <div class="footer__link"> <a href="#">Términos y condiciones</a></div>
+            </div>
+            <div class="footer__text">
+              <p>Chiletec 2024 | Todos los derechos reservados</p>
+            </div>
+            <div class="footer__socials">
+              <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
+              <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
+              <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
