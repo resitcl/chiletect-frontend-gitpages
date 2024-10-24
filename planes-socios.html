@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=9482" rel="stylesheet" type="text/css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="js/main.js?v=9482" type="text/javascript"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="css/main.css?v=86029" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=86029" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -18,10 +16,7 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
-    <!--mapbox-->
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
-    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
-    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXwCbHfAgUojFET0wDPrOnyZettASuVQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <header>
@@ -46,7 +41,7 @@
         <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
-            <input type="text" name="s" placeholder="Buscar producto">
+            <input type="text" name="s" placeholder="Buscar ...">
           </form>
         </div>
         <div class="header__wrap">
@@ -198,15 +193,15 @@
                   </div>
                   <div class="article__body"> 
                     <ul>
-                      <li>Varius sollicitudin scelerisque urna phasellus tellus in luctus
+                      <li>Massa sagittis curae quisque ad blandit venenatis mi
                       </li>
-                      <li>Erat tincidunt colus himenaeos egestas vivamus lobortis nec posuere metus dictumst cubilia.
+                      <li>Maecenas eros volutpat vitae faucibus quis sagittis nibh sodales commodo netus velit.
                       </li>
-                      <li>Viverra dictumst eu lacinia cras quis praesent nunc quis
+                      <li>Convallis commodo potenti rutrum pulvinar purus felis ornare condimentum
                       </li>
-                      <li>Semper vivamus diam condimentum quis mauris maecenas nam
+                      <li>Nisi viverra at metus nibh fringilla curabitur sodales
                       </li>
-                      <li>Elementum aenean suspendisse risus pellentesque porta sapien vehicula fusce imperdiet ligula.
+                      <li>Mauris habitant purus fusce gravida tincidunt aenean libero blandit posuere ut.
                       </li>
                     </ul>
                   </div>
@@ -221,15 +216,15 @@
                   </div>
                   <div class="article__body"> 
                     <ul>
-                      <li>Augue auctor nam nisi litora cras hendrerit magna
+                      <li>Eleifend et venenatis phasellus vulputate suspendisse urna donec
                       </li>
-                      <li>Auctor posuere lobortis venenatis tortor eros sollicitudin ornare gravida lobortis lobortis adipiscing.
+                      <li>Integer euismod augue justo faucibus nostra accumsan ac taciti class ornare risus.
                       </li>
-                      <li>Sagittis vitae habitant inceptos placerat non lacus habitasse duis
+                      <li>Erat mi ac nunc sed a convallis pharetra inceptos
                       </li>
-                      <li>In lacinia neque curae elementum netus ut lobortis
+                      <li>At magna rhoncus aenean metus quisque curae enim
                       </li>
-                      <li>Pretium proin convallis tempor cursus taciti sem torquent habitasse enim proin.
+                      <li>Magna potenti mollis sed colus leo dictum mattis eros ullamcorper lacus.
                       </li>
                     </ul>
                   </div>
@@ -244,15 +239,15 @@
                   </div>
                   <div class="article__body"> 
                     <ul>
-                      <li>Sapien ut consequat magna molestie laoreet senectus rutrum
+                      <li>Convallis etiam nunc curabitur nunc fringilla netus lobortis
                       </li>
-                      <li>Torquent donec non placerat sem fermentum nostra porta sed aliquet colus condimentum.
+                      <li>Feugiat senectus phasellus sollicitudin aenean morbi placerat tortor inceptos mauris gravida feugiat.
                       </li>
-                      <li>Egestas erat rhoncus class convallis torquent fringilla massa bibendum
+                      <li>Class nullam nibh nibh diam felis suscipit fermentum quisque
                       </li>
-                      <li>Facilisis massa luctus purus mi fusce posuere ullamcorper
+                      <li>Sodales nisi ullamcorper eget quisque egestas nullam magna
                       </li>
-                      <li>Suspendisse aliquam placerat ante mi enim libero maecenas curae vel interdum.
+                      <li>Porta varius per urna et id integer per primis imperdiet nulla.
                       </li>
                     </ul>
                   </div>
@@ -422,6 +417,7 @@
             </div>
             <div class="footer__socials">
               <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><img src="img/icons/icon-x.png"></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>

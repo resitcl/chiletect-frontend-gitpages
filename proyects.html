@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=46925" rel="stylesheet" type="text/css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="js/main.js?v=46925" type="text/javascript"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="css/main.css?v=61523" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=61523" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -18,10 +16,7 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
-    <!--mapbox-->
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
-    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
-    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXwCbHfAgUojFET0wDPrOnyZettASuVQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <header>
@@ -46,7 +41,7 @@
         <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
-            <input type="text" name="s" placeholder="Buscar producto">
+            <input type="text" name="s" placeholder="Buscar ...">
           </form>
         </div>
         <div class="header__wrap">
@@ -191,9 +186,9 @@
                     <li class="breadcrumb-item"><a href="#"><span>Proyectos</span></a></li>
                   </ol>
                 </nav>
-                <h1 class="section__title">Est sociosqu sapien sapien tristique
+                <h1 class="section__title">Nulla venenatis integer torquent aliquam
                 </h1>
-                <p class="section__description">Class dapibus tempus nullam aliquam quam augue fusce adipiscing nibh. Torquent donec ligula praesent gravida dui enim aliquam iaculis at colus luctus aptent etiam est.
+                <p class="section__description">Risus egestas nam etiam maecenas sem vestibulum fermentum non purus. Enim ullamcorper curabitur pretium phasellus torquent volutpat habitant faucibus vulputate porttitor suscipit integer eget etiam.
                 </p>
               </div>
               <div class="section__image"> <img src="img/uploads/1.jpg"></div>
@@ -283,7 +278,7 @@
                           <div class="bg"><img src="img/uploads/1.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Quam ante libero donec bibendum tempus</a></h4>
+                          <h4 class="article__title"><a href="#">Purus gravida aliquam eu ac pharetra</a></h4>
                         </div>
                       </article>
                     </div>
@@ -294,7 +289,7 @@
                           <div class="bg"><img src="img/uploads/2.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Litora fusce gravida litora ante non</a></h4>
+                          <h4 class="article__title"><a href="#">Eros gravida neque donec massa augue</a></h4>
                         </div>
                       </article>
                     </div>
@@ -305,7 +300,7 @@
                           <div class="bg"><img src="img/uploads/3.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Tristique condimentum lobortis quis dapibus torquent</a></h4>
+                          <h4 class="article__title"><a href="#">Lacus orci accumsan arcu curabitur torquent</a></h4>
                         </div>
                       </article>
                     </div>
@@ -316,7 +311,7 @@
                           <div class="bg"><img src="img/uploads/4.jpg"></div>
                         </div>
                         <div class="article__body">
-                          <h4 class="article__title"><a href="#">Volutpat turpis vestibulum ante iaculis duis</a></h4>
+                          <h4 class="article__title"><a href="#">Ut dictum ac ante magna egestas</a></h4>
                         </div>
                       </article>
                     </div>
@@ -495,6 +490,7 @@
             </div>
             <div class="footer__socials">
               <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><img src="img/icons/icon-x.png"></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>

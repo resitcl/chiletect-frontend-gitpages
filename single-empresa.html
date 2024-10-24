@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=17094" rel="stylesheet" type="text/css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="js/main.js?v=17094" type="text/javascript"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="css/main.css?v=75338" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=75338" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -18,10 +16,7 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
-    <!--mapbox-->
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
-    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
-    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXwCbHfAgUojFET0wDPrOnyZettASuVQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <header>
@@ -46,7 +41,7 @@
         <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
-            <input type="text" name="s" placeholder="Buscar producto">
+            <input type="text" name="s" placeholder="Buscar ...">
           </form>
         </div>
         <div class="header__wrap">
@@ -192,16 +187,21 @@
             <div class="cols">
               <div class="section__flex">
                 <div class="col-md-6">
-                  <div class="section__image"> <img src="img/uploads/8.jpg"></div>
+                  <div class="section__image"> <img src="img/uploads/8.jpg">
+                    <div class="section__tags">
+                      <div class="section__tag">Exportadora de productos/servicios<span class="fa fa-check"></span></div>
+                      <div class="section__tag">Convenio Marco<span class="fa fa-check"></span></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-md-6">
                   <div class="section__content">
                     <div class="section__flex">
                       <div class="section__logo"><img src="img/logos/logo-2.png"></div>
                     </div>
-                    <h1 class="section__title">Cras class venenatis vel habitant
+                    <h1 class="section__title">Volutpat netus eget cursus morbi
                     </h1>
-                    <p>Aliquet turpis ornare nostra facilisis habitant fringilla nisi ultrices sapien. Odio convallis dictumst sollicitudin erat erat habitant ornare erat iaculis inceptos ante metus risus consequat.
+                    <p>Ligula facilisis egestas ut turpis interdum taciti fermentum dapibus turpis. Sagittis blandit imperdiet lacinia non facilisis venenatis pellentesque eget semper hendrerit ante auctor aenean nullam.
                     </p>
                     <div class="section__categories"><span class="section__category">Comercio Retail</span><span class="section__category">Servicios Financieros</span><span class="section__category">Transporte</span></div>
                   </div>
@@ -219,19 +219,19 @@
           <div class="section__body">
             <div class="section__features">
               <div class="cols">
-                <div class="col-md-4">
+                <div class="col-xs-6 col-md-4">
                   <div class="section__feature"> 
                     <h4 class="section__title">Sitio web:</h4>
                     <p>www.option.tech</p>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-6 col-md-4">
                   <div class="section__feature">
                     <h4 class="section__title">Email </h4>
                     <p>contacto@option.tech</p>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-12 col-md-4">
                   <div class="section__feature"> 
                     <h4 class="section__title">TELÉFONO</h4>
                     <p>+56 2 2946 2106</p>
@@ -324,6 +324,7 @@
             </div>
             <div class="footer__socials">
               <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><img src="img/icons/icon-x.png"></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>

@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=57198" rel="stylesheet" type="text/css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="js/main.js?v=57198" type="text/javascript"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="css/main.css?v=3817" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=3817" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -18,10 +16,7 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
-    <!--mapbox-->
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
-    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
-    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXwCbHfAgUojFET0wDPrOnyZettASuVQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <header>
@@ -46,7 +41,7 @@
         <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
-            <input type="text" name="s" placeholder="Buscar producto">
+            <input type="text" name="s" placeholder="Buscar ...">
           </form>
         </div>
         <div class="header__wrap">
@@ -195,7 +190,7 @@
             </div>
             <div class="section__content">
               <div class="section__info"><span class="section__tag">Categoría						</span><span class="section__date">05 nov 2024						</span></div>
-              <h1 class="section__title">Mollis at tellus fringilla est
+              <h1 class="section__title">Torquent purus potenti porttitor consectetur
               </h1>
             </div>
           </div>
@@ -209,16 +204,16 @@
                 <div class="section__contents">
                   <div class="section__content">
                     <h4>Objetivos generales</h4>
-                    <p>Mauris neque potenti aenean taciti potenti taciti consectetur sodales arcu. Et nostra arcu per vestibulum nullam erat vulputate sem sociosqu metus suscipit nam tellus netus.
+                    <p>Facilisis etiam duis tristique dui quisque suscipit congue senectus tortor. Sapien varius tempus dapibus scelerisque imperdiet dictumst eros condimentum ad mollis fermentum cursus netus netus.
                     </p>
-                    <p>Morbi torquent tellus ultricies laoreet vehicula cras maecenas odio consectetur. Rhoncus commodo sapien fringilla turpis semper neque lacinia maecenas ultrices. Curabitur scelerisque quam eros gravida mauris tempor integer morbi id maecenas velit sagittis diam senectus.
+                    <p>Porta pretium lectus sed venenatis fames fusce tortor tellus nisi. Ultrices donec ante duis hendrerit sem nec malesuada consectetur euismod. Donec vitae egestas vel duis fusce tempus tristique ut tempor tellus potenti himenaeos facilisis lobortis.
                     </p>
                   </div>
                   <div class="section__content">
                     <h4>Descripción del servicio</h4>
-                    <p>Ac commodo per viverra inceptos enim in senectus cubilia ut. Nostra rhoncus volutpat sem consequat sagittis aliquam tincidunt ligula pretium proin laoreet mi volutpat etiam.
+                    <p>Dapibus donec gravida semper nostra tincidunt lectus sagittis arcu egestas. Iaculis luctus massa commodo ornare phasellus placerat feugiat orci cursus sodales magna morbi mi ultrices.
                     </p>
-                    <p>Augue eget nunc curabitur hac accumsan molestie ornare adipiscing sagittis. Congue condimentum tortor sodales velit habitant nunc semper egestas adipiscing. Suspendisse erat habitant integer ullamcorper volutpat diam suspendisse enim ac curae auctor diam venenatis inceptos.
+                    <p>Vel fames nostra senectus ut aptent vivamus volutpat placerat potenti. Dictumst congue porta ad varius etiam id a quis vivamus. Donec viverra lobortis duis blandit ut euismod tortor eros cursus commodo tellus nam vehicula convallis.
                     </p>
                   </div>
                 </div>
@@ -359,6 +354,7 @@
             </div>
             <div class="footer__socials">
               <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><img src="img/icons/icon-x.png"></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>

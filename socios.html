@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Chiletec</title>
+    <meta charset="UTF-8">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/main.css?v=40939" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=40939" type="text/javascript"></script>
+    <!-- Meta tags facebook-->
+    <meta property="og:title" content="#">
+    <meta property="og:description" content="#">
+    <meta property="og:image" content="#">
+    <!-- Meta tags twitter cards-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#">
+    <meta name="twitter:description" content="#">
+    <meta name="twitter:image" content="#">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXwCbHfAgUojFET0wDPrOnyZettASuVQ&amp;callback=initMap" async defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__primary">
+        <div class="header__wrap">
+          <div class="header__inner">
+            <div class="header__socials">
+              <div class="header__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="header__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
+              <div class="header__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
+              <div class="header__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>
+            </div>
+            <div class="header__right">
+              <div class="header__button"> <a href="#" class="btn">Hazte Socio</a></div>
+              <div class="header__button"> <a href="contact.html" class="btn btn--dark">Contacto</a></div>
+              <div class="header__button header__button--search--desktop"><a class="btn btn--social"><span class="fa fa-search"></span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__secondary">
+        <div class="header__bg"></div>
+        <div class="header__search">
+          <form action="search.html" method="get"><span class="fa fa-search"></span>
+            <input type="text" name="s" placeholder="Buscar ...">
+          </form>
+        </div>
+        <div class="header__wrap">
+          <div class="header__inner">
+            <div class="header__logo"><a href="index.html"><img src="img/icons/logo-chiletec.png"></a></div>
+            <div class="header__nav">
+              <div class="header__nav__bg"></div>
+              <div class="header__nav__nav">
+                <div class="header__nav__close">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="header__nav__back">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="header__menu">
+                  <nav>
+                    <ul>
+                      <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="header__right">
+              <div class="header__item header__item--search--mobile"><span class="fa fa-search"></span></div>
+              <div class="header__item header__item--ham">
+                <div class="header__ham"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="header__nav__mobile">
+              <div class="header__nav__opacity"> </div>
+              <div class="header__nav__nav">
+                <div class="header__nav__nav__header"> 
+                  <div class="header__nav__isotipo"><img src="img/icons/logo-submenu-chiletec.png"></div>
+                  <div class="header__nav__button"><a href="#" class="btn">Hazte Socio</a></div>
+                  <div class="header__nav__back">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div class="header__nav__close">
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="header__nav__nav__body">
+                  <div class="header__nav__nav__menu"> 
+                    <ul> 
+                      <li class="header__nav__li"><a href="aboutus.html">Nosotros</a></li>
+                      <li class="header__nav__li"><a href="#">Iniciativas</a>
+                        <ul>
+                          <li><a href="work-tables.html">Mesas de trabajos</a></li>
+                          <li><a href="agent-operator.html">Agente operador</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="proyects.html">Proyectos</a></li>
+                          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                          <li><a href="emprendimientos.html">Emprendimiento</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__nav__li"><a href="impacto.html">Impacto</a></li>
+                      <li class="header__nav__li"><a href="news.html">Noticias</a></li>
+                      <li class="header__nav__li"><a href="events.html">Eventos</a></li>
+                      <li class="header__nav__li"><a href="#">Socios</a>
+                        <ul>
+                          <li><a href="planes-socios.html">Hazte socio</a></li>
+                          <li><a href="#">Beneficios</a></li>
+                          <li><a href="#">Nuestros socios</a></li>
+                          <li><a href="directorio-empresas.html">Directorio empresas</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__nav__nav__footer">
+                  <div class="header__nav__nav__footer__infos">
+                    <div class="header__nav__nav__footer__info">
+                      <p>+569 332 361 02<span class="fa fa-phone"></span></p>
+                    </div>
+                    <div class="header__nav__nav__footer__info">
+                      <p>info@chiletec.org<span class="fa fa-envelope"></span></p>
+                    </div>
+                  </div>
+                  <div class="header__nav__nav__footer__links">
+                    <ul>
+                      <li><a href="#">Pago Online</a></li>
+                      <li><a href="#">Repositorio</a></li>
+                      <li><a href="#">Contacto</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__nav__nav__footer__socials">
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-facebook"></span></a></div>
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-instagram"></span></a></div>
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-linkedin"></span></a></div>
+                    <div class="header__nav__nav__footer__social"><a href="#"><span class="fa fa-youtube"></span></a></div>
+                  </div>
+                  <div class="header__nav__nav__footer__bottom">
+                    <h4>Chiletec 2024</h4>
+                    <p>Todos los derechos reservados</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="sections">
+      <section class="section--header">
+        <div class="section__bg">
+          <div class="bg"> <img src="img/uploads/background-header.png"></div>
+        </div>
+        <div class="section__wrap section__wrap--header">
+          <div class="section__body">
+            <div class="section__flex">
+              <div class="section__content">
+                <nav>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><span>Inicio</span></a></li>
+                    <li class="breadcrumb-item"><a href="#"><span>Directorio de empresas</span></a></li>
+                  </ol>
+                </nav>
+                <h1 class="section__title">Empresas que participan de nuestras iniciativas</h1>
+                <p class="section__description">Ultrices duis phasellus est neque odio malesuada aptent fusce erat. Ante suspendisse nisi nisi ullamcorper accumsan suscipit est eu imperdiet augue quis aliquam fermentum litora.
+                </p>
+              </div>
+              <div class="section__image"><img src="img/uploads/1.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--companies">
+        <div class="section__wrap">
+          <div class="section__header"> <span class="section__subtitle">DESCUBRE TODOS LOS CURSOS</span>
+            <h3 class="section__title">Que te permitirán potenciar tu carrera.</h3>
+          </div>
+          <div class="section__body">
+            <div class="cols">
+              <div class="col-md-12"> 
+                <div class="cols col--margincero">
+                  <div class="col-xs-6 col-md-3"> 
+                    <div class="section__namefilters">
+                      <div class="section__icon"> <img src="img/icons/icon-menufilters.png"></div>
+                      <p>Filtros de búsqueda</p><span class="fa fa-angle-down"></span>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <div class="section__selectfilters">
+                      <div class="form__element"> 
+                        <div class="form__input">
+                          <select class="filters-order">
+                            <option selected disabled class="option__search">Filtrar por empresa </option>
+                            <option value="*">Todos</option>
+                            <option value="desc">Mayor Precio</option>
+                            <option value="asc">Menor Precio</option>
+                            <option value="maxprox">Más próximo</option>
+                            <option value="minprox">Menos próximo</option>
+                            <!--option(value="maxrecient") Más recientes-->
+                            <!--option(value="minrecient") Menos recientes-->
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-md-2">
+                    <div class="section__clearfilters"> <a data-clear-filters class="btn btn--white btn--min">Borrar filtros</a></div>
+                  </div>
+                  <div class="col-xs-6 col-md-4">
+                    <div class="section__infofilters"><span id="filterCountText">0 Filtros</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="section__filters filters">
+                  <div class="section__filters__back"></div>
+                  <div class="section__filters__box">
+                    <div class="section__filters__headermobile">
+                      <h4 class="section__title">Filtrar por</h4>
+                      <div class="section__close"> <img src="img/icons/icon-close.png"></div>
+                    </div>
+                    <div class="section__quicksearch">
+                      <form class="form">
+                        <div class="section__flex">
+                          <div class="form__element">
+                            <div class="form__input">
+                              <input type="text" name="name" placeholder="Escribe tu búsqueda" class="quicksearch"><span class="fa fa-search">			</span>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="section__filters__item section__filters__item--open">
+                      <h3 class="section__filters__name"><span class="fa fa-angle-down"></span>Empresa</h3>
+                      <div class="section__filters__options">
+                        <div data-filter-group="colores" class="section__checkboxs button-group">
+                          <div class="section__checkbox">
+                            <label data-filter=".rojo">
+                              <input type="checkbox" value=".rojo">Rojo
+                            </label>
+                          </div>
+                          <div class="section__checkbox">
+                            <label data-filter=".azul">
+                              <input type="checkbox" value=".azul">Azul
+                            </label>
+                          </div>
+                          <div class="section__checkbox">
+                            <label data-filter=".verde">
+                              <input type="checkbox" value=".verde">Verde
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section__filters__item">
+                      <h3 class="section__filters__name"><span class="fa fa-angle-down"></span>Producto o Servicio</h3>
+                      <div class="section__filters__options">
+                        <div data-filter-group="tamano" class="section__checkboxs button-group">
+                          <div class="section__checkbox">
+                            <label data-filter=".pequeno">
+                              <input type="checkbox" value=".pequeno">Pequeño
+                            </label>
+                          </div>
+                          <div class="section__checkbox">
+                            <label data-filter=".mediano">
+                              <input type="checkbox" value=".mediano">Mediano
+                            </label>
+                          </div>
+                          <div class="section__checkbox">
+                            <label data-filter=".grande">
+                              <input type="checkbox" value=".grande">Grande
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section__filters__item">
+                      <h3 class="section__filters__name"><span class="fa fa-angle-down"></span>Actividad mayor facturación</h3>
+                      <div class="section__filters__options">
+                        <div data-filter-group="nivel" class="section__checkboxs button-group">
+                          <div class="section__checkbox">
+                            <label data-filter=".bajo">
+                              <input type="checkbox" value=".bajo">Bajo
+                            </label>
+                          </div>
+                          <div class="section__checkbox">
+                            <label data-filter=".intermedio">
+                              <input type="checkbox" value=".intermedio">Intermedio 
+                            </label>
+                          </div>
+                          <div class="section__checkbox">
+                            <label data-filter=".alto">
+                              <input type="checkbox" value=".alto">Alto 
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="section__available">
+                  <div class="cols grid--available">
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo mediano alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Donec class nibh hac donec proin conubia sagittis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Suspendisse tempor aenean nostra ultrices tellus mauris suspendisse
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Feugiat mauris interdum malesuada nunc tortor ante mattis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Odio consequat venenatis tristique feugiat ut nisi potenti
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Libero aenean inceptos egestas tristique mauris enim curabitur
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Justo imperdiet interdum bibendum consectetur at ullamcorper nunc
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Cras quisque purus erat orci euismod lacinia porta
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Vehicula tortor dui torquent elementum cursus iaculis venenatis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Ullamcorper eleifend nulla orci placerat lacinia habitant pretium
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Feugiat quam mauris consequat eget ad malesuada accumsan
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Tincidunt fusce nunc donec euismod risus consectetur aliquet
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Urna quisque quisque vel potenti tempor sociosqu tristique
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Tempor ac ut aptent cras interdum aliquam fermentum
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Curae conubia semper venenatis sed habitasse in class
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Nunc cursus gravida congue mollis ac varius ultricies
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Aptent id mauris netus laoreet nec mauris semper
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo mediano alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Aptent ligula convallis sed dictum aenean himenaeos consectetur
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Tristique rhoncus accumsan conubia ac eget hendrerit in
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Iaculis curae cubilia blandit porttitor cras facilisis imperdiet
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Netus potenti lacus egestas tortor potenti at metus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Maecenas sem condimentum fusce diam inceptos hac duis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Laoreet malesuada torquent ultrices aenean fringilla mauris justo
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Rhoncus ligula morbi tempus pellentesque tortor aenean hac
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Sollicitudin mauris aenean cras tempor lobortis aliquet vel
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Non a etiam sem fusce phasellus tellus aliquam
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Sagittis luctus metus eu adipiscing mollis condimentum posuere
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Quisque justo quisque donec lacus hendrerit sodales maecenas
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Pretium viverra mi venenatis eget semper elit vulputate
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Etiam turpis nam erat etiam placerat vulputate fames
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Curae praesent lacinia orci dui velit sodales nullam
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Lectus metus neque curae lectus sollicitudin tincidunt aenean
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Id aenean per auctor libero sapien luctus ullamcorper
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo mediano alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Placerat tristique quam enim fusce non sociosqu potenti
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Egestas eu metus nam eros nec quisque vel
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Ut est torquent aenean ut diam scelerisque varius
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Nam risus lectus nisl aliquam laoreet porttitor primis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Vivamus sollicitudin nostra tempus arcu aliquam nec quisque
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Curae semper elementum rutrum molestie senectus torquent lectus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Morbi tempus leo viverra taciti tempus neque hendrerit
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Nullam elit etiam massa turpis placerat dapibus risus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Elit sagittis velit duis mattis lacinia colus lobortis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Ullamcorper facilisis scelerisque est aptent ut felis quis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Sed volutpat donec eget laoreet cubilia quis hendrerit
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Feugiat vitae senectus tortor aenean ultrices per felis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Habitant nisl laoreet donec egestas habitasse ornare purus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Blandit egestas conubia congue phasellus class sem tincidunt
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Adipiscing nisi pulvinar dapibus nisl massa quis libero
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Cubilia nostra placerat suspendisse aptent curae mattis tellus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo mediano alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Aliquam scelerisque morbi quis venenatis malesuada fermentum curabitur
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Class maecenas nisl enim dictumst sem placerat diam
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Senectus platea accumsan commodo risus velit integer congue
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Congue convallis varius nibh donec per primis tempor
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Eros nostra venenatis non consequat sem ad nulla
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Eget sapien adipiscing quisque aptent justo vitae egestas
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Fusce fames potenti ut nibh pharetra dictum leo
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Viverra sapien bibendum duis inceptos aliquet consectetur tempus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Volutpat bibendum donec pellentesque sapien volutpat egestas dictum
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-1.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Sociosqu sed et litora augue in posuere vivamus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-2.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 rojo alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Conubia ullamcorper non class morbi semper vitae posuere
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-3.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Dapibus ad eget habitasse auctor curae cursus praesent
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-4.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde pequeno intermedio dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Libero quisque blandit vel vel odio platea cras
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-5.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul grande bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Phasellus neque aliquam netus sagittis posuere tempus felis
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-6.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 azul chico bajo dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Tempor quis colus auctor viverra condimentum vulputate potenti
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-7.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 verde grande alto dscroll">
+                      <div class="section__company"> 
+                        <div class="section__image">
+                          <div class="section__slug">Lobortis morbi lobortis nulla quisque fermentum vitae purus
+                          </div><a href="single-empresa.html"><img src="img/logos/logo-8.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer__primary">
+        <div class="footer__eff"> <img src="img/icons/eff-footer.png"></div>
+        <div class="footer__wrap">
+          <div class="footer__flex">
+            <div class="footer__nav">
+              <h4>Nosotros</h4>
+              <ul>
+                <li><a href="#">Misión / Visión</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Directorio</a></li>
+                <li><a href="#">Equipo</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Iniciativas</h4>
+              <ul>
+                <li><a href="#">Charlas</a></li>
+                <li><a href="#">Workshops</a></li>
+                <li><a href="#">Mesas de Trabajo</a></li>
+                <li><a href="#">Agendes Operador</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Eventos</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Impacto</h4>
+              <ul>
+                <li><a href="#">Métricas</a></li>
+                <li><a href="#">Reportes</a></li>
+                <li><a href="#">Prensa</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Noticias</h4>
+              <ul>
+                <li><a href="#">Emprendimiento</a></li>
+                <li><a href="#">Gobierno</a></li>
+                <li><a href="#">Actividades</a></li>
+                <li><a href="#">Corporativo</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h4>Socios</h4>
+              <ul>
+                <li><a href="#">Hazte socio</a></li>
+                <li><a href="#">Beneficios</a></li>
+                <li><a href="#">Nuestros Socios</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary"> 
+        <div class="footer__wrap footer__wrap--none">
+          <div class="footer__row"> 
+            <div class="footer__info"> 
+              <div class="footer__info__date"> <a href="#">+569 332 361 02<span class="fa fa-phone"></span></a></div>
+              <div class="footer__info__date"> <a href="#">info@chiletec.org<span class="fa fa-envelope"></span></a></div>
+            </div>
+            <div class="footer__links"> 
+              <div class="footer__link"><a href="#">Pago Online</a></div>
+              <div class="footer__link"><a href="#">Repositorio</a></div>
+              <div class="footer__link"><a href="#">Contacto</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary">					
+        <div class="footer__wrap footer__wrap--none">
+          <div class="footer__row">
+            <div class="footer__terms"> 
+              <div class="footer__link"> <a href="#">Políticas de uso</a></div>
+              <div class="footer__link"> <a href="#">Términos y condiciones</a></div>
+            </div>
+            <div class="footer__text">
+              <p>Chiletec 2024 | Todos los derechos reservados</p>
+            </div>
+            <div class="footer__socials">
+              <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><img src="img/icons/icon-x.png"></a></div>
+              <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
+              <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
+              <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=26778" rel="stylesheet" type="text/css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="js/main.js?v=26778" type="text/javascript"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="css/main.css?v=29879" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=29879" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -18,10 +16,7 @@
     <meta name="twitter:title" content="#">
     <meta name="twitter:description" content="#">
     <meta name="twitter:image" content="#">
-    <!--mapbox-->
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
-    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
-    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXwCbHfAgUojFET0wDPrOnyZettASuVQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <header>
@@ -46,7 +41,7 @@
         <div class="header__bg"></div>
         <div class="header__search">
           <form action="search.html" method="get"><span class="fa fa-search"></span>
-            <input type="text" name="s" placeholder="Buscar producto">
+            <input type="text" name="s" placeholder="Buscar ...">
           </form>
         </div>
         <div class="header__wrap">
@@ -192,7 +187,7 @@
                   </ol>
                 </nav>
                 <h1 class="section__title">Empresas que participan de nuestras iniciativas</h1>
-                <p class="section__description">Feugiat pellentesque pharetra sed auctor turpis aenean blandit ante nunc. Fringilla pretium nulla accumsan blandit turpis facilisis curabitur egestas torquent arcu lacus viverra augue proin.
+                <p class="section__description">Ut venenatis neque sapien massa nullam ullamcorper eleifend luctus ante. Pharetra class nisi facilisis ante suspendisse elementum semper molestie fermentum dui a arcu mi suspendisse.
                 </p>
               </div>
               <div class="section__image"> <img src="img/uploads/1.jpg"></div>
@@ -409,6 +404,7 @@
             </div>
             <div class="footer__socials">
               <div class="footer__social"> <a href="#"><span class="fa fa-facebook"></span></a></div>
+              <div class="footer__social"> <a href="#"><img src="img/icons/icon-x.png"></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-instagram"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-linkedin"></span></a></div>
               <div class="footer__social"> <a href="#"><span class="fa fa-youtube"></span></a></div>
