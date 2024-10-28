@@ -2995,6 +2995,12 @@ footer .footer__secondary .footer__row .footer__text p {
     line-height: 28px;
   }
 }
+footer .footer__terciary {
+  padding: 10px;
+}
+footer .footer__terciary .footer__powerby img {
+  width: 120px;
+}
 form,
 .form {
   position: relative;
